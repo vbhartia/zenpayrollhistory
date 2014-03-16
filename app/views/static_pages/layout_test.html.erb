@@ -1,0 +1,450 @@
+<head>
+  <link href="//d7ph2h5bi5yex.cloudfront.net/assets/dashboard-1ab8ddf0ff1c7523b0266bce9ad9cd5d.css" media="screen, print" rel="stylesheet" type="text/css">
+</head>
+
+<style>
+  .green{
+    background-color: green
+  }
+</style>
+
+
+
+<div id="container" class="container-fluid">
+  <div id="top" class="row-fluid">
+    <div class="span2 hidden-phone" id="account-above-logo">&nbsp;</div>
+    <div class="span10" id="account-content"><div class="account-view-container"><div class="row-fluid">
+  <div class="span6 text-left">
+    <span class="company-name">Varun's Cafe</span>
+  </div>
+
+  <div class="span6">
+    <a href="javascript:void(0)" id="account-menu-toggle" class="off">varun.bhartia@gmail.com</a>
+
+    <div id="account-menu" class="hide" style="display: none;">
+      <div id="account-menu-paper">
+        <div id="account-menu-paperclip">
+          <ul>
+            
+
+            
+
+            
+
+            
+
+            
+
+            <li><a href="/settings" class="personal-details">Personal Details</a></li>
+            <li><a href="/user/sign_out" data-method="delete" data-bypass="" rel="nofollow" class="sign-out">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal hide fade"></div>
+</div></div>
+  </div>
+
+  <div class="row-fluid">
+    <nav class="span2" id="nav-content"><div class="nav-view-container"><a href="/" class="" id="logo">
+  <img src="//d7ph2h5bi5yex.cloudfront.net/assets/zenpayroll-logo-31c661008dbce1db625798e95af53cfd.png" alt="ZenPayroll">
+</a>
+<ul class="nav nav-list">
+  <li id="home-nav-item">
+    <a href="/" class="dashboard">
+     dashboard<span></span>
+    </a>
+  </li>
+  <li id="run-payroll-nav-item">
+    <a href="/payrolls/new" class="run_payroll">
+    run payroll<span></span>
+    </a>
+  </li>
+  <li id="pay-contractors-nav-item" class="divider-below ">
+    <a href="/contractors/pay" class="pay_contractors">
+    pay contractors<span></span>
+    </a>
+  </li>
+  <li id="manage-employees-nav-item">
+    <a href="/employees" class="manage_employees">
+    employees<span></span>
+    </a>
+  </li>
+  <li id="manage-contractors-nav-item">
+    <a href="/contractors" class="manage_contractors">
+    contractors<span></span>
+    </a>
+  </li>
+
+  <li id="payroll-history-nav-item" class="current divider-below">
+    <a href="/payrolls" class="payroll_history">
+    payroll history<span></span>
+    </a>
+  </li>
+  <li id="company-details-nav-item">
+    <a href="/company/details" class="company_details">
+    company<span></span>
+    </a>
+  </li>
+  <li id="company-locations-nav-item">
+    <a href="/company/locations" class="company_locations">
+    locations<span></span>
+    </a>
+  </li>
+  <li id="company-benefits-nav-item">
+    <a href="/benefits" class="company_benefits">
+    benefits<span></span>
+    </a>
+  </li>
+  <li id="forms-nav-item">
+    <a href="/forms" class="company_forms">
+    forms<span></span>
+    </a>
+  </li>
+  <li id="company-settings-nav-item">
+    <a href="/company/settings" class="company_settings">
+    settings<span></span>
+    </a>
+  </li>
+</ul>
+</div></nav>
+
+    <div id="main" class="paper span10" style="height: auto; overflow-y: auto;">
+      <div id="page-container">
+        <div class="clear height-zero">&nbsp;</div>
+
+        <!--<h6 class='margin-top-none'>Varun&#x27;s Cafe</h6>-->
+        <div id="loading" class="hide" style="display: none;">
+        </div>
+
+        <div id="main-content" style="opacity: 1;"><div class="home-home-view">
+
+  <div class="payroll-index-view">
+    <h2 class='title'>Payroll History</h2>
+    
+    <p>
+      See payroll history for employees and contractors and generate journals and reports
+    </p>
+
+    <br/>
+
+
+    <div class="row-fluid">
+      <div class ='span12'>
+
+        <ul class="nav nav-tabs">
+          <li><a href="#previous" data-toggle="tab">Previous Payroll Summaries</a></li>
+          <li><a href="#contractor" data-toggle="tab">Contractor Payments</a></li>
+          <li><a href="#journal" data-toggle="tab">Journal Report</a></li>
+          <li><a href="#reports" data-toggle="tab">Other Reports</a></li>
+        </ul>
+
+      </div>
+  </div>
+  
+  <div class="tab-content">
+
+
+
+    <div class="tab-pane active" id="previous">
+
+    <h3>
+      Previous Payroll Summaries
+    </h3>
+
+                 
+      <div class="responsive-calendar">
+
+
+
+  <div class="controls">
+
+      <a class="pull-left" data-go="prev"><div class="btn"><i class="icon-chevron-left"></i></div></a>
+
+       <h4><span data-head-year></span> <span data-head-month></span></h4>
+
+      <a class="pull-right" data-go="next"><div class="btn"><i class="icon-chevron-right"></i></div></a>
+  </div><hr/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="day-headers">
+    <div class="day header">Mon</div>
+    <div class="day header">Tue</div>
+    <div class="day header">Wed</div>
+    <div class="day header">Thu</div>
+    <div class="day header">Fri</div>
+    <div class="day header">Sat</div>
+    <div class="day header">Sun</div>
+  </div>
+  <div class="days" data-group="days">
+
+
+
+    <!-- the place where days will be generated -->
+
+
+  </div>
+</div>
+<!-- Responsive calendar - END -->
+
+<script>
+$( document ).ready( function() {
+  $(".responsive-calendar").responsiveCalendar({
+    onActiveDayHover: function(events) {
+      console.log(events)
+      console.log()
+    },
+    time: '2014-03',
+    events: {
+      "2014-03-03": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-04": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-05": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-06": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-07": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+
+      "2014-03-10": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-11": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-12": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-13": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-14": {"number": 1, "badgeClass": "green", "url": "", "class": "green"},
+
+      "2014-03-17": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-18": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-19": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-20": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-21": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+
+      "2014-03-24": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-25": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-26": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-27": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-28": {"number": 1, "badgeClass": "green", "url": "", "class": "green"}
+            }
+
+
+
+});
+
+})
+
+
+</script>
+
+
+
+
+    </div>
+    <div class="tab-pane" id="contractor">
+
+    <h3>
+      Contractor Payments
+    </h3>
+    <p>
+      Your contractors were paid according to the schedule below. Please click on a specific contractor payment to see more in depth details.
+    </p>
+
+
+<div class="row-fluid clear">
+  <div class="span12">
+    <table class="table table-links table-striped open-table margin-top-none contractor-payments-list">
+      <thead>
+        <tr>
+          <th class="payperiod">Pay Day</th>
+          <th class="name">Contractors Paid</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+
+      <tbody>
+      <tr class="contractor-payment-summary-by-date-row-view"><td data-title="Pay Day" class="name">
+  <div class="cell">
+    03/12/2014<br>
+    <a href="/contractor_payments/2014-03-12" class="payroll-details showonhover has-icon">
+      <i class="icon-list"></i> view details
+    </a>&nbsp;
+  </div>
+</td>
+<td data-title="Contractors Paid" class="name">
+  <div class="cell">
+    Acme Corp, Louis Armstrong
+  </div>
+</td>
+<td data-title="Total Amount">
+  <div class="cell">
+    $1,581.00
+  </div>
+</td>
+</tr></tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="3" class="name">
+            
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+    </div>
+  
+    <div class="tab-pane" id="journal">
+
+<div class="row-fluid clear">
+      <div class="span8">
+        <h2>Payroll Journal Report</h2>
+        <p>
+          This report includes payroll information about each pay period and each employee during the time span you select.
+          Some call it "The Accountant's Dream Report".
+        </p>
+        <form class="form-horizontal">
+          <fieldset>
+
+            <div class="control-group">
+              <label class="control-label">Journal Start Date</label>
+              <div class="controls">
+                <input name="start_date" value="" class="datepicker-field span8 margin-bottom9" type="text">
+
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Journal End Date</label>
+              <div class="controls">
+                <input name="end_date" value="" class="datepicker-field span8" type="text">
+
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button href="javascript:void(0)" type="button" class="btn generate green-btn"><i class="icon-ok icon-white"></i><span class="text">Generate</span></button>
+              <input type="reset" class="btn">
+            </div>
+
+          </fieldset>
+        </form>
+
+      </div>
+      <div class="span4 pay-employees">
+        <div class="well">
+          <h4>Who Needs a Payroll Journal?</h4>
+          <p>
+            Payroll journal reports are often required by insurance companies so they can better understand your business. Your accountant may also use the report to track your payroll expenses.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+  
+    <div class="tab-pane" id="reports">
+
+<div class="row-fluid clear">
+      <div class="span8">
+        <h2>Other Reports</h2>
+        <p>
+
+        </p>
+        <form class="form-horizontal">
+          <fieldset>
+
+            <div class="control-group">
+              <label class="control-label">Report</label>
+              <div class="controls">
+                <a href="/tax_payments" class="">Taxes Payments Report</a>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Description</label>
+              <div class="controls">
+                This report details all tax deposits ZenPayroll has done on behalf of your company. This includes
+                federal, state, and local taxes.
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Report</label>
+              <div class="controls">
+                <a href="/bank_transactions" class="">Bank Account Transactions</a>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Description</label>
+              <div class="controls">
+                This report details all bank transactions initiated by ZenPayroll from your company account.
+              </div>
+            </div>
+
+            
+
+          </fieldset>
+        </form>
+
+      </div>
+      <div class="span4 pay-employees">
+        <div class="well">
+          <h4>What bank debits should I expect?</h4>
+          <p>
+            For each pay period, ZenPayroll initiates three separate debits from your bank account -- one for total employee salaries, one for total payroll taxes and one for total reimbursements.
+            That's it. No additional debits when fiscal quarters end, or at the end of the fiscal year.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+  
+</div>
+</div></div>
+
+        <div class="clear height-zero">&nbsp;</div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="row-fluid">
+    <div class="span2 hidden-phone"></div>
+    <div id="footer" class="span10">
+      <ul>
+        <li><img src="//d7ph2h5bi5yex.cloudfront.net/assets/secure-connection-3a9ea71a3d6d09336c24f6f3769428c9.png" alt="secure connection" title="secure connection"></li>
+        <li><a href="https://zenpayroll-demo.com/company" class="" data-track="" target="_blank" data-bypass="">about</a></li>
+        <li><a href="https://zenpayroll-demo.com/careers" class="" data-track="" target="_blank" data-bypass="">jobs</a></li>
+        <li><a href="/help" class="">help</a></li>
+        <li><a href="/privacy" class="">privacy</a></li>
+        <li><a href="/terms" class="">terms</a></li>
+        <li><a class="social" target="_blank" title="Follow ZenPayroll on Facebook" href="http://www.facebook.com/zenpayroll" data-bypass=""><img src="//d7ph2h5bi5yex.cloudfront.net/assets/facebook-9d96fd53e38afa0a107e5c6f85e3e655.png"></a></li>
+        <li><a class="social" target="_blank" title="Follow ZenPayroll on Twitter" href="http://www.twitter.com/zenpayroll" data-bypass=""><img src="//d7ph2h5bi5yex.cloudfront.net/assets/twitter-5691561ae5bbe5e6506e2db25422c00d.png"></a></li>
+        <li id="copyright-app">© ZenPayroll, Inc. Built in California.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="timeout-modal" class="modal hide fade" tabindex="-1">
+    <div class="modal-header">
+    </div>
+    <div class="modal-body">
+      <p class="text-center margin-bottom-none">
+        <img src="//d7ph2h5bi5yex.cloudfront.net/assets/timeout-21008348fe9cb6a2c80679f8d50ac9e1.png" alt="session timeout">
+      </p>
+      <h1 class="border-none margin-bottom text-center">For Your Security</h1>
+      <p class="sign-out-message text-large text-center">
+        You will be signed out of your ZenPayroll account<br>
+        in <span class="seconds-left"></span> seconds due to inactivity.
+      </p>
+    </div>
+    <div class="modal-footer text-center border-none">
+      <button id="timeout-modal-resume" class="btn green-btn" data-dismiss="modal">Stay Signed In</button>
+    </div>
+  </div>
+</div>
