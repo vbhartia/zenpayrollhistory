@@ -6,6 +6,10 @@
   .green{
     background-color: green
   }
+
+  .purple{
+    background-color: purple
+  }
 </style>
 
 
@@ -209,46 +213,66 @@
 
 <script>
 $( document ).ready( function() {
-  $(".responsive-calendar").responsiveCalendar({
-    onActiveDayHover: function(events) {
+
+  function addLeadingZero(num) {
+    if (num < 10) {
+      return "0" + num;
+    } else {
+      return "" + num;
+    }
+  }
+
+  $(".responsive-calendar").responsiveCalendar(
+  {
+
+    onDayClick: function(events) {
       console.log(events)
-      console.log()
+      var thisDayEvent, key;
+
+
+      key = $(this).data('year')+'-'+addLeadingZero( $(this).data('month') )+'-'+addLeadingZero( $(this).data('day') );
+      thisDayEvent = events[key];
+      alert(thisDayEvent.text);
     },
     time: '2014-03',
     events: {
-      "2014-03-03": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-04": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-05": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-06": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-07": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-03": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-04": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-05": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-06": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-07": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
 
-      "2014-03-10": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-11": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-12": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-13": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-14": {"number": 1, "badgeClass": "green", "url": "", "class": "green"},
+      "2014-03-10": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-11": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-12": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-13": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-14": {"number": 1, "text":'Payroll Run. \n\nPayday Baby!!!!!!!', "badgeClass": "badge-warning", "class": "green"},
 
-      "2014-03-17": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-18": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-19": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-20": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-21": {"number": 0, "badgeClass": "badge-warning", "url": ""},
+      "2014-03-17": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-18": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-19": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-20": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-21": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
 
-      "2014-03-24": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-25": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-26": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-27": {"number": 0, "badgeClass": "badge-warning", "url": ""},
-      "2014-03-28": {"number": 1, "badgeClass": "green", "url": "", "class": "green"}
+      "2014-03-24": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-25": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-26": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-27": {"text":'Another Fabulous Day at Varun\' coffee place!', "badgeClass": "badge-warning", "url": ""},
+      "2014-03-28": {"number": 1, "text":'Payroll Run. \n\nPayday Baby!!!!!!!', "badgeClass": "badge-warning", "class": "green"},
+
+      "2014-03-30": {"number": 1, "text":'Its Mike\'s Birthday!!!!', "badgeClass": "badge-warning", "class": "purple"},
+
             }
+  } 
 
-
-
-});
+  );
 
 })
 
 
 </script>
+
+
 
 
 
